@@ -1,3 +1,9 @@
+input.onButtonPressed(Button.B, function () {
+    ChangeDelay += 100
+})
+input.onButtonPressed(Button.A, function () {
+    ChangeDelay += -100
+})
 let MovementDelay = 10000
 let ChangeDelay = 2000
 let delay = 500
