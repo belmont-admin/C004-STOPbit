@@ -1,12 +1,6 @@
-basic.showLeds(`
-    . . # . .
-    . # # # .
-    . . # . .
-    . . # . .
-    . . # . .
-    `)
 let MovementDelay = 10000
-let ChangeDelay = 3000
+let ChangeDelay = 2000
+let delay = 500
 // Pin 0 = Red
 //
 // Pin 1 = Yellow
@@ -15,7 +9,95 @@ let ChangeDelay = 3000
 basic.forever(function () {
     pins.digitalWritePin(DigitalPin.P1, 0)
     pins.digitalWritePin(DigitalPin.P0, 1)
-    basic.pause(MovementDelay)
+    basic.pause(ChangeDelay)
+    for (let index = 0; index < 4; index++) {
+        basic.showLeds(`
+            . . . . #
+            . # . # .
+            # # # . #
+            . # . # .
+            . . . . .
+            `)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . # . # #
+            # # # . .
+            . # . # #
+            `)
+    }
+    basic.showLeds(`
+        . # . # .
+        # . # . #
+        # . # . #
+        # . # . #
+        . # . # .
+        `)
+    basic.pause(delay)
+    basic.showLeds(`
+        # . . . .
+        # # . . .
+        # . # . .
+        # . . # .
+        # . . . #
+        `)
+    basic.pause(delay)
+    basic.showLeds(`
+        . . . # .
+        # . # . #
+        . # # . #
+        . . # . #
+        . . . # .
+        `)
+    basic.pause(delay)
+    basic.showLeds(`
+        # . . # .
+        # . # . #
+        # . # . #
+        # . # . #
+        # # # . #
+        `)
+    basic.pause(delay)
+    basic.showLeds(`
+        . . . # .
+        # # # # #
+        # . . # .
+        . # . # .
+        . . # # .
+        `)
+    basic.pause(delay)
+    basic.showLeds(`
+        . . . . .
+        # # . # .
+        # . # . #
+        # . . . #
+        # . . # .
+        `)
+    basic.pause(delay)
+    basic.showLeds(`
+        . . . . .
+        . # . . #
+        # . # . #
+        # . # . #
+        # . . # #
+        `)
+    basic.pause(delay)
+    basic.showLeds(`
+        . . . . .
+        . . . . #
+        # # # # #
+        . # . . #
+        . . . . .
+        `)
+    basic.pause(delay)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . # . # #
+        # # # . .
+        . # . # #
+        `)
+    basic.pause(ChangeDelay)
     pins.digitalWritePin(DigitalPin.P1, 1)
     basic.pause(ChangeDelay)
     pins.digitalWritePin(DigitalPin.P0, 0)
